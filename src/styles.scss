@@ -1,1 +1,436 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/themes/bootstrap-theme.scss";
+@import "~bootstrap/scss/bootstrap";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%;}
+body {
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
+.router-link-active, .router-link-active:focus, .router-link:focus {
+  outline: none !important;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.h-1 {
+    height: 1px;
+}
+
+.pointable {
+    cursor: pointer;
+}
+
+.mt-5 {
+    margin-top: 5%;
+}
+
+
+.mt-10 {
+    margin-top: 10%;
+}
+
+.hover-primary:hover {
+    color: $primary !important;
+}
+
+body {
+    scrollbar-width: thin !important;          /* "auto" or "thin"  */
+    scrollbar-color: blue $secondary !important;   /* scroll thumb & track */
+  }
+
+.bg-mystic {
+    background-color: $mystic;
+}
+
+.white-svg {
+    fill: white;
+}
+
+.bg-dark-yellow {
+  background: $dark-yellow !important;
+}
+
+.bg-light-green {
+  background: $light-green !important;
+}
+
+.bg-deep-purple {
+  background: $purple !important;
+}
+
+.primary-svg {
+    fill: $primary;
+}
+
+.pointable-secondary {
+    &:hover {
+        color: $secondary;
+        h3 {
+            color: $primary;
+            transition: all .9s;
+        }
+        svg {
+            fill: $primary;
+        };
+        transition: all 0.9s;
+    }
+}
+
+mat-dialog-container {
+  padding: 0 !important;
+}
+
+mat-dialog-content {
+  padding: 0px !important;
+}
+
+mat-dialog-actions {
+  padding: 0;
+}
+
+.border-grey {
+  border: 1px solid $sec-flat-grey;
+}
+
+.pointable-secondary-fill {
+    &:hover {
+        svg {
+            fill: $accent !important;
+        };
+        transition: all 0.9s;
+    }
+}
+.badge {
+  font-weight: normal;
+}
+.badge-grey {
+    background-color: $mystic;
+    color: grey;
+    &:hover{
+        background-color: $sec-flat-grey;
+        color: $mystic;
+        transition: all .3s;
+    }
+}
+.bg-gainsbro {
+    background: gainsboro;
+}
+
+.text-gainsbro {
+    color: gainsboro;
+}
+
+.bg-accent {
+    background-color: $accent;
+}
+.text-grey {
+    color: grey;
+}
+
+.text-blue {
+    color: blue;
+}
+
+.text-mystic {
+    color: $mystic;
+}
+
+.text-cornflowerblue {
+  color: cornflowerblue;
+}
+
+.text-black {
+  color: black;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.sticky-top {
+    position: sticky;
+    width: 100%;
+}
+
+.base-element {
+    position: relative;
+    img {
+        object-fit: center;
+    }
+}
+.full-overlay, .base-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.base-image {
+    object-fit: center;
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.arrow {
+    cursor: default;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.center {
+    position: absolute;
+    top: 50%;
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
+}
+
+button:active, button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.mat-autocomplete-panel {
+    // box-shadow: 0px 0px 2px 0px $primary !important;
+    box-shadow: none !important;
+    border: 1px solid $ash-grey;
+    // border-top: none;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+.four-col-img-div{
+    margin: 5px;
+    overflow: hidden;
+    height: 150px;
+    border: 1px solid $ash-grey;
+    img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid $ash-grey;
+        object-fit: cover;
+    }
+}
+
+.four-col-img {
+    // max-height: 250px;
+}
+
+.square-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg-alice-blue {
+  background: $alice-blue;
+}
+
+
+// .square img{
+//     width: 100%;
+//     height: 100%;
+// }
+
+.square {
+    position: relative;
+    flex-basis: calc(33.333% - 10px);
+    margin: 3px;
+    box-sizing: border-box;
+    max-height: 200px;
+}
+
+.router-link-active {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.input-select:focus, textarea:focus, .btn:focus {
+    border-color: $ash-grey;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.p-r-15 {
+    padding: 0 15% !important;
+}
+
+.overflow-auto {
+    background: linear-gradient(
+        from bottom,
+        to top,
+        white,
+        transparent
+    ) 1 100%;
+}
+
+.fom-control-xs {
+    height: calc(1.0em + 0.5rem + 2px);
+}
+
+.choices-pill {
+    border-radius: 50px;
+    word-wrap: break-word;
+    margin-bottom: 2% !important;
+    font-size: small;
+    // padding: 2px !important;
+    font-weight: normal;
+    &:hover {
+        // background-color: $secondary !important;
+    }
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.choice-pill-active {
+    border: 1px solid $secondary !important;
+    background-color: khaki !important;
+    color: grey !important;
+    &:hover{
+        background-color: gainsboro !important;
+    }
+}
+
+.image-container {
+    .image-div {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.mat-btn-sm {
+    height: 10px;
+    width: 30px;
+}
+
+.standard-pop-up-dialog {
+    mat-dialog-container{
+        // background-color: $mystic !important;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+    }
+}
+
+.link-no-bg {
+  background: none !important;
+}
+
+.svg-loading {
+  transform: scale(.5, .5);
+}
+
+.overflow-auto::-webkit-scrollbar, mat-dialog-container::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px;               /* width of the entire scrollbar */
+  }
+.overflow-auto::-webkit-scrollbar-track, mat-dialog-container::-webkit-scrollbar-track {
+    background: $accent;        /* color of the tracking area */
+}
+.overflow-auto::-webkit-scrollbar-thumb, mat-dialog-container::-webkit-scrollbar-thumb {
+    background-color: grey;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    // border: 1px solid orange;  /* creates padding around scroll thumb */
+}
+
+@media only screen and (min-width: 980px) {
+    // styling for large screen devices
+    .standard-pop-up-dialog {
+        width: 70%;
+        mat-dialog-container{
+            // background-color: green;
+            .p-r-15 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .p-r-15-0 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    // Styling for small screen devices
+    .standard-pop-up-dialog {
+        width: 100%;
+        mat-dialog-container{
+            // background-color: green;
+            .p-r-15 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .p-r-15-0 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+    }
+
+    .p-r-15{
+        padding: 0 2% !important;
+        transition: .5s all;
+    }
+}
+
+@media (min-width: 1200px) {
+    .standard-pop-up-dialog {
+        width: 35%;
+        mat-dialog-container {
+            .p-r-15 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .p-r-15-0 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$jp-primary: (
+    50 : #e3eef6,
+    100 : #bad5e9,
+    200 : #8cb9db,
+    300 : #5d9ccc,
+    400 : #3b87c1,
+    500 : #1872b6,
+    600 : #156aaf,
+    700 : #115fa6,
+    800 : #0e559e,
+    900 : #08428e,
+    A100 : #bcd5ff,
+    A200 : #89b5ff,
+    A400 : #5696ff,
+    A700 : #3c86ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$jp-secondary: (
+    50 : #fdebe4,
+    100 : #facebc,
+    200 : #f7ad90,
+    300 : #f38c64,
+    400 : #f17342,
+    500 : #ee5a21,
+    600 : #ec521d,
+    700 : #e94818,
+    800 : #e73f14,
+    900 : #e22e0b,
+    A100 : #ffffff,
+    A200 : #ffdeda,
+    A400 : #ffb2a7,
+    A700 : #ff9b8d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$jp-warn: (
+    50 : #fdebe4,
+    100 : #facebc,
+    200 : #f7ad90,
+    300 : #f38c64,
+    400 : #f17342,
+    500 : #ee5a21,
+    600 : #ec521d,
+    700 : #e94818,
+    800 : #e73f14,
+    900 : #e22e0b,
+    A100 : #ffffff,
+    A200 : #ffdeda,
+    A400 : #ffb2a7,
+    A700 : #ff9b8d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+$jpdashboard-primary: mat-palette($jp-primary);
+$jpdashboard-accent: mat-palette($jp-secondary, A200, A100, A400);
+
+$jpdashboard-warn: mat-palette($jp-warn);
+
+$jpdashboard-theme: mat-light-theme($jpdashboard-primary, $jpdashboard-accent, $jpdashboard-warn);
+
+@include angular-material-theme($jpdashboard-theme);

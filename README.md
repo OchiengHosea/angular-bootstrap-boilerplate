@@ -24,4 +24,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
+<h1 class="text-primary">Starter Instructions</h1>
+<ol>
+  <li>Open angular.json</li>
+  <li>replace 'angular-bootstrap-starter' with the name of your project</li>
+  <li>open assets/bootstrap-theme.scss and replace primary and secondary colors with your specific ones</li>
+  <li>Open assets/custom.scss and replace palettes with your specific ones</li>
+</ol>
+
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
