@@ -1,7 +1,12 @@
 <h1 class="text-primary">Starter Instructions</h1>
+<div class="m-2">
+  <button class="btn btn-sm" (click)="login()">Login</button>
+</div>
 <ol>
   <li>Open angular.json</li>
   <li>replace 'angular-bootstrap-starter' with the name of your project</li>
   <li>open assets/bootstrap-theme.scss and replace primary and secondary colors with your specific ones</li>
   <li>Open assets/custom.scss and replace palettes with your specific ones</li>
 </ol>
+<button mat-button [routerLink]="['/auth/register']" routerLinkActive="router-link-active" >Authentication</button>
+<router-outlet></router-outlet>

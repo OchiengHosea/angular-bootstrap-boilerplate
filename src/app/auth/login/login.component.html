@@ -1,0 +1,44 @@
+<div class="bg-light d-flex login-top">
+  <h1 class="text-center text-primary m-auto">Login</h1>
+</div>
+
+<div class="form-zone base-element pt-3">
+  <form [formGroup]="loginForm" class="container-fluid row m-0 p-0" (submit)="onSubmit()">
+    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+      <div class="m-1">
+        <label for="username" class="text-primary">Username</label>
+        <input type="text" class="form-control form-control-sm" id="username" formControlName="username">
+        <div *ngFor="let error of loginForm.get('username').errors?.validationErrors"><small
+            class="text-danger">{{error|keyToWord:'all'}}</small></div>
+        <div *ngFor="let error of loginForm.get('username').errors?.serverErrors"><small
+            class="text-danger">{{error}}</small></div>
+      </div>
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+      <div class="m-1">
+        <label for="password" class="text-primary">Password</label>
+        <input type="text" class="form-control form-control-sm" id="password" formControlName="password">
+        <div *ngFor="let error of loginForm.get('password').errors?.validationErrors"><small
+            class="text-danger">{{error|keyToWord:'all'}}</small></div>
+        <div *ngFor="let error of loginForm.get('password').errors?.serverErrors"><small
+            class="text-danger">{{error}}</small></div>
+      </div>
+    </div>
+
+    <div class="d-flex col-12 mt-3">
+      <button [disabled]="loading" type="submit" class="btn btn-sm btn-light m-auto w-50">
+        <small *ngIf="loading" class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></small>
+        <span>{{formAction}}</span>
+      </button>
+    </div>
+  </form>
+
+  <div class="mt-4 ml-2">
+    <small class="text-primary mr-2 ml-2 pointable">Forgot Password</small><small class="text-primary mr-2 pointable" [routerLink]="['auth/register']" routerLinkActive="router-link-active" >Sign up</small>
+  </div>
+
+  <div>
+    <i class="fas fa-cogs"></i>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="form-zone pt-3 d-flex justify-content-center">
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 m-0 p-0">
+    <form [formGroup]="signupForm" class="container-fluid row m-0 p-0">
+      <div class="form-group col-12">
+        <div class="m-1">
+          <label for="username" class="text-primary">Username</label>
+          <input type="text" class="form-control form-control-sm" id="username" formControlName="username">
+          <div *ngFor="let error of signupForm.get('username').errors?.validationErrors"><small
+              class="text-danger">{{error|keyToWord:'all'}}</small></div>
+          <div *ngFor="let error of signupForm.get('username').errors?.serverErrors"><small
+              class="text-danger">{{error}}</small></div>
+        </div>
+      </div>
+
+      <div class="form-group col-12">
+        <div class="m-1">
+          <label for="password1" class="text-primary">password1</label>
+          <input type="text" class="form-control form-control-sm" id="password1" formControlName="password1">
+          <div *ngFor="let error of signupForm.get('password1').errors?.validationErrors"><small
+              class="text-danger">{{error|keyToWord:'all'}}</small></div>
+          <div *ngFor="let error of signupForm.get('password1').errors?.serverErrors"><small
+              class="text-danger">{{error}}</small></div>
+        </div>
+      </div>
+
+      <div class="form-group col-12">
+        <div class="m-1">
+          <label for="password2" class="text-primary">password2</label>
+          <input type="text" class="form-control form-control-sm" id="password2" formControlName="password2">
+          <div *ngFor="let error of signupForm.get('password2').errors?.validationErrors"><small
+              class="text-danger">{{error|keyToWord:'all'}}</small></div>
+          <div *ngFor="let error of signupForm.get('password2').errors?.serverErrors"><small
+              class="text-danger">{{error}}</small></div>
+        </div>
+      </div>
+
+      <div class="d-flex col-12 mt-3">
+        <button [disabled]="loading" type="submit" class="btn btn-sm btn-light m-auto w-50">
+          <small *ngIf="loading" class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></small>
+          <span>{{formAction}}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- <div class="mt-4 ml-2">
+    <small class="text-primary mr-2 ml-2 pointable">Forgot Password</small><small class="text-primary mr-2 pointable">Login</small>
+  </div> -->
+</div>
